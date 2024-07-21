@@ -10,11 +10,16 @@ const LOCAL_STORAGE_KEY = "shortUrls";
 
 const InputUrlCard = () => {
   const [url, setUrl] = useState("");
-  const [shortUrls, setShortUrls] = useState<string[]>(() => {
-    const savedUrls = localStorage.getItem(LOCAL_STORAGE_KEY);
-    return savedUrls ? JSON.parse(savedUrls) : [];
-  });
+  const [shortUrls, setShortUrls] = useState<string[]>([]);
   const { toast } = useToast();
+
+  // Load URLs from localStorage on component mount (client-side only)
+  useEffect(() => {
+    const savedUrls = localStorage.getItem(LOCAL_STORAGE_KEY);
+    if (savedUrls) {
+      setShortUrls(JSON.parse(savedUrls));
+    }
+  }, []);
 
   // Save URLs to localStorage whenever shortUrls changes
   useEffect(() => {
@@ -91,7 +96,12 @@ const InputUrlCard = () => {
             key={index}
             className="flex flex-row font-medium justify-between py-2 px-3 bg-primary xl:w-[35%] md:w-[70%] lg:w-[70%] w-[78%] rounded-md text-[#0C0A09]"
           >
-            <a href={shortUrl} className="underline" target="_blank">
+            <a
+              href={shortUrl}
+              className="underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {shortUrl}
             </a>
             <div className="flex gap-2">
