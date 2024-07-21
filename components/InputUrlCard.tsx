@@ -52,6 +52,7 @@ const InputUrlCard = () => {
           variant: "destructive",
         });
       });
+    setUrl("");
   };
 
   const handleCopy = (urlToCopy: string) => {
