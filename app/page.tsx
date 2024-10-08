@@ -21,7 +21,7 @@ export default function Home() {
           href="https://ko-fi.com/electro69"
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-8 inline-flex items-center px-4 py-2 bg-[#FACC15] font-medium rounded-md hover:bg-[#E2B814] text-black transition-colors duration-200"
+          className="mt-4 inline-flex items-center px-4 py-2 bg-[#FACC15] font-medium rounded-md hover:bg-[#E2B814] text-black transition-colors duration-200"
         >
           <CoffeeIcon className="mr-2" size={20} />
           Support Us :)

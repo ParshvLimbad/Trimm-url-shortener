@@ -80,7 +80,7 @@ const InputUrlCard = () => {
 
   return (
     <form
-      className="flex flex-col gap-2 mt-6 w-full justify-center"
+      className="flex flex-col gap-2 mt-6 w-full justify-center items-center"
       onSubmit={handleOnSubmit}
     >
       <div className="flex flex-row gap-2 w-full justify-center">
@@ -91,6 +91,9 @@ const InputUrlCard = () => {
         />
         <Button type="submit">Convert!</Button>
       </div>
+      <p className="text-sm text-muted-foreground">
+        Links are cleared on refresh
+      </p>
       <div className="flex flex-col gap-2 mt-1 w-full items-center">
         {shortUrls.map((shortUrl, index) => (
           <div
