@@ -1,11 +1,12 @@
 import InputUrlCard from "@/components/InputUrlCard";
 import Navbar from "./Navbar";
+import { CoffeeIcon } from "lucide-react";
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="w-full flex flex-col justify-center items-center h-[30rem]">
+      <main className="w-full flex flex-col justify-center items-center h-[80vh]">
         <h1 className="scroll-m-20 text-3xl font-bold tracking-tight lg:text-5xl text-center lg:max-w-[40rem]">
           <span className="text-[#FACC15]">Trimm</span> is the free and fastest
           url shortening service
@@ -16,6 +17,15 @@ export default function Home() {
           easy-to-share URLs.
         </p>
         <InputUrlCard />
+        <a
+          href="https://ko-fi.com/electro69"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-8 inline-flex items-center px-4 py-2 bg-[#FACC15] text-white font-medium rounded-md hover:bg-[#E2B814] text-black transition-colors duration-200"
+        >
+          <CoffeeIcon className="mr-2" size={20} />
+          Support Us :)
+        </a>
       </main>
     </>
   );
