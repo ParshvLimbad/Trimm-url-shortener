@@ -91,9 +91,7 @@ const InputUrlCard = () => {
         />
         <Button type="submit">Convert!</Button>
       </div>
-      <p className="text-sm text-muted-foreground">
-        Links are cleared on refresh
-      </p>
+      <p className="text-sm text-muted-foreground">Site is down temporarily</p>
       <div className="flex flex-col gap-2 mt-1 w-full items-center">
         {shortUrls.map((shortUrl, index) => (
           <div
